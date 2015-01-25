@@ -12,6 +12,11 @@
   <!-- Loading Bootstrap -->
   <link href="./css/vendor/bootstrap.min.css" rel="stylesheet">
   <script type="text/javascript" src="./js/vendor/jquery.min.js"></script>
+  
+  <!-- Loading Angular -->
+  <script type="text/javascript" src="./js/angular.min.js"></script>
+  <!--script src='./js/ng-grid.js'></script-->
+
 
   <!-- Loading Flat UI -->
   <link href="./css/flat-ui.css" rel="stylesheet">
@@ -44,68 +49,72 @@
       </nav><!-- /navbar -->
     </div>
     
-    <div class="container">
-      <div class="container">
-        <div class="row">
-         <table class="table table-list-search">
-          <thead>
-            <tr>
-              <th>Entry</th>
-              <th>Entry</th>
-              <th>Entry</th>
-              <th>Entry</th>
-              <th>Entry</th>
-              <th>Entry</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Sample</td>
-              <td>Filter</td>
-              <td>12-11-2011 11:11</td>
-              <td>OK</td>
-              <td>123</td>
-              <td>Do some other</td>
-            </tr>
-            <tr>
-              <td>Try</td>
-              <td>It</td>
-              <td>11-20-2013 08:56</td>
-              <td>It</td>
-              <td>Works</td>
-              <td>Do some FILTERME</td>
-            </tr>
-            <tr>
-              <td>§</td>
-              <td>$</td>
-              <td>%</td>
-              <td>&</td>
-              <td>/</td>
-              <td>!</td>
-            </tr>
-          </tbody>
-        </table>   
+    <div class='panel panel-default' data-ng-controller='stats_controller'>
+      <div class='panel-heading'>
+        <h1 class='panel-title'>
+          <a data-toggle='collapse' data-parent='#accordion' href='#collapseThree'>
+            Statistika
+          </a>
+        </h1>
       </div>
-      <div class="col-md-3 pull-right">
-        <form action="#" method="get">
-          <div class="input-group">
-            <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
-            <input class="form-control" id="system-search" name="q" placeholder="Search for" required>
-            <span class="input-group-btn">
-              <button type="submit" class="btn btn-default"><span class="fui-search"></span></button>
-            </span>
+
+        <div class='panel-body'>
+          <div class='row'>
+            <div class='col-md-12'>
+              <div class='table-responsive'>
+                <table class='table'>
+                  <thead>
+                    <td>
+                      <b>ID - Stat</b>
+                    </td>
+                    <td>
+                      <b>Date</b>
+                    </td>
+                    <td>
+                      <b>Device name</b>
+                    </td>
+                    <td>
+                      <b>Latitude</b>
+                    </td>
+                    <td>
+                      <b>Logitude</b>
+                    </td>
+                    <td>
+                      <b>Last used</b>
+                    </td>
+                  </thead>
+                  <tr ng-repeat='stat in stats'>
+                    <td>
+                       {{stat.id_stat}}
+                    </td>
+                    <td>
+                      {{stat.date}}
+                    </td>
+                    <td>
+                      {{stat.name}}
+                    </td>
+                    <td>
+                      {{stat.latitude}}
+                    </td>
+                    <td>
+                     {{stat.longitude}}
+                    </td>
+                    <td>
+                     {{stat.last_used}}
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
           </div>
-        </form>
       </div>
     </div>
-  </div>
-</div>
 
 
 
 
-<footer>
-</footer>
+    <footer>
+    </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

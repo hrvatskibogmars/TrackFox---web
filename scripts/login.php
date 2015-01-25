@@ -22,7 +22,7 @@ if(isset($_POST))  {
         } else {
             R::store($login);
             $_SESSION['username'] = $login->username;
-            header("Location: cot.html");
+            header("Location:../cot.html");
             echo $_SESSION['username'];
         }
     }
