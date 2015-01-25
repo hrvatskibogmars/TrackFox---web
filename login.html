@@ -9,150 +9,132 @@
 
 	<title>TrackFox</title>
 
-	<!-- Bootstrap core CSS -->
-	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<!-- Loading Bootstrap -->
+	<link href="./assets/css/vendor/bootstrap.min.css" rel="stylesheet">
+	<script type="text/javascript" src="./assets/js/vendor/jquery.min.js"></script>
 
-	<!-- Custom styles for this template -->
-	<link href="assets/css/main.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/modernizr.custom.js"></script>
-	
-
+	<!-- Loading Flat UI -->
+	<link href="./assets/css/flat-ui.css" rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon.ico">
 	
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+</head>
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-      <![endif]-->
-  </head>
+<body data-spy="scroll" data-offset="0" data-target="#theMenu">
 
-  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
-
-  	<!-- Menu -->
-  	<nav class="menu" id="theMenu">
-  		<div class="menu-wrap">
-			<h1 class="logo"><a href="index.html#home">TrackFox</a></h1>
-			<i class="icon-remove menu-close"></i>
-			<a href="./index.html" class="smoothScroll">Home</a>
-			<a href="./login.html" class="smoothScroll">Login</a>
-			<a href="./register.html" class="smoothScroll">Register</a>
-			<a href="#contact" class="smoothScroll">Contact</a>
-			<a href="https://github.com/mars4/TrackFox---web" target="_blank"><span class="icon-github"></span> Github</a>
-  		</div>
-
-  		<!-- Menu button -->
-  		<div id="menuToggle"><i class="icon-reorder"></i></div>
-  	</nav>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+				<span class="sr-only">Toggle navigation</span>
+			</button>
+			<a class="navbar-brand" href="#">TrackFox</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse-01">
+			<ul class="nav navbar-nav">
+				<li><a href="./index.html">Home</a></li>
+				<li class="active"><a href="./login.html">Log in</a></li>
+				<li><a href="./register.html">Register</a></li>
+				<li><a href="#fakelink">About</a></li>
+				<li><a href="#fakelink">Contact</a></li>
+				<li><a href="#fakelink">Github</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav><!-- /navbar -->
 
 
 
-  	<!-- ========== HEADER SECTION ========== -->
-  	<section id="home" name="home"></section>
-	  	<div id="headerwrap">
-	  		<div class="container">
-	  			<div class="logo">
-	  				<img src="assets/img/logo.png">
-	  				<section id="login">
-	  					<div class="container">
-	  						<div class="row row-centered">
-	  							<div class="col-md-7 col-md-offset-2">
-	  								<div class="form-wrap">
-	  									<h1>Log in to strat tracking!</h1>
-	  									<form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
-	  										<div class="form-group">
-	  											<label for="email" class="sr-only">Email</label>
-	  											<input type="email" name="email" id="email" class="form-control" placeholder="somebody@example.com">
-	  										</div>
-	  										<div class="form-group">
-	  											<label for="key" class="sr-only">Password</label>
-	  											<input type="password" name="key" id="key" class="form-control" placeholder="Password">
-	  										</div>
-	  										<input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in">
-	  									</form>
-	  									<a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
-	  									<hr>
-	  								</div>
-	  							</div> <!-- /.col-xs-12 -->
-	  						</div> <!-- /.row -->
-	  					</div> <!-- /.container -->
-	  				</section>
-
-	  				<div class="modal fade forget-modal" tabindex="-1" role="dialog" aria-labelledby="myForgetModalLabel" aria-hidden="true">
-	  					<div class="modal-dialog modal-sm">
-	  						<div class="modal-content">
-	  							<div class="modal-header">
-	  								<button type="button" class="close" data-dismiss="modal">
-	  									<span aria-hidden="true">×</span>
-	  									<span class="sr-only">Close</span>
-	  								</button>
-	  								<h4 class="modal-title">Recovery password</h4>
-	  							</div>
-	  							<div class="modal-body">
-	  								<p>Type your email account</p>
-	  								<input type="email" name="recovery-email" id="recovery-email" class="form-control" autocomplete="off">
-	  							</div>
-	  							<div class="modal-footer">
-	  								<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-	  								<button type="button" class="btn btn-custom">Recovery</button>
-	  							</div>
-	  						</div> <!-- /.modal-content -->
-	  					</div> <!-- /.modal-dialog -->
-	  				</div> <!-- /.modal -->
-	  			</div>
-	  		</div><!-- /container -->
-	  	</div><!-- /headerwrap -->	
+	<!-- ========== HEADER SECTION ========== -->
+	<section id="login">
+		<div class="container">
+			<div class="row row-centered">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="form-wrap">
+						<h1>START tracking!</h1>
+						<form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
+							<div class="form-group">
+								<label for="email" class="sr-only">Email</label>
+								<input type="email" name="email" id="email" class="form-control" placeholder="somebody@example.com">
+							</div>
+							<div class="form-group">
+								<label for="key" class="sr-only">Password</label>
+								<input type="password" name="key" id="key" class="form-control" placeholder="Password">
+							</div>
+							<input type="submit" id="btn-login" class="btn btn-success btn-lg btn-block" value="Log in">
+						</form>
+						<a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
+						<hr>
+					</div>
+				</div> <!-- /.col-xs-12 -->
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
 	</section>
-	<!-- ========== CONTACT SECTION ========== -->
-	<section id="contact" name="contact"></section>
-	<div id="footer">
-    <div class="container">
-	        <div class="row">
-	            <h3 class="footertext">About Us:</h3>
-	            <br>
-	              <div class="col-md-4">
-	                <center>
-	                  <img src="http://oi60.tinypic.com/w8lycl.jpg" class="img-circle" alt="the-brains">
-	                  <br>
-	                  <h4 class="footertext">Programmer</h4>
-	                  <p class="footertext">You can thank all the crazy programming here to this guy.<br>
-	                </center>
-	              </div>
-	              <div class="col-md-4">
-	                <center>
-	                  <img src="http://oi60.tinypic.com/2z7enpc.jpg" class="img-circle" alt="...">
-	                  <br>
-	                  <h4 class="footertext">Artist</h4>
-	                  <p class="footertext">All the images here are hand drawn by this man.<br>
-	                </center>
-	              </div>
-	              <div class="col-md-4">
-	                <center>
-	                  <img src="http://oi61.tinypic.com/307n6ux.jpg" class="img-circle" alt="...">
-	                  <br>
-	                  <h4 class="footertext">Designer</h4>
-	                  <p class="footertext">This pretty site and the copy it holds are all thanks to this guy.<br>
-	                </center>
-	              </div>
-	            </div>
-	            <div class="row">
-	            <p><center><a href="#">Contact Stuff Here</a> <p class="footertext">Copyright 2015</p></center></p>
-	        </div>
-	    </div>
-	</div>
+
+	<div class="modal fade forget-modal" tabindex="-1" role="dialog" aria-labelledby="myForgetModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">×</span>
+						<span class="sr-only">Close</span>
+					</button>
+					<h4 class="modal-title">Recovery password</h4>
+				</div>
+				<div class="modal-body">
+					<p>Type your email account</p>
+					<input type="email" name="recovery-email" id="recovery-email" class="form-control" autocomplete="off">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-custom">Recovery</button>
+				</div>
+			</div> <!-- /.modal-content -->
+		</div> <!-- /.modal-dialog -->
+	</div> <!-- /.modal -->
+</div>
+
+
+<div id="footer">
+	<div class="container">
+		<div class="row">
+			<h3 class="footertext">About Us:</h3>
+			<br>
+			<div class="col-md-4">
+				<center>
+					<img src="http://oi60.tinypic.com/w8lycl.jpg" class="img-circle" alt="the-brains">
+					<br>
+					<h4 class="footertext">Programmer</h4>
+					<p class="footertext">You can thank all the crazy programming here to this guy.<br>
+					</center>
+				</div>
+				<div class="col-md-4">
+					<center>
+						<img src="http://oi60.tinypic.com/2z7enpc.jpg" class="img-circle" alt="...">
+						<br>
+						<h4 class="footertext">Artist</h4>
+						<p class="footertext">All the images here are hand drawn by this man.<br>
+						</center>
+					</div>
+					<div class="col-md-4">
+						<center>
+							<img src="http://oi61.tinypic.com/307n6ux.jpg" class="img-circle" alt="...">
+							<br>
+							<h4 class="footertext">Designer</h4>
+							<p class="footertext">This pretty site and the copy it holds are all thanks to this guy.<br>
+							</center>
+						</div>
+					</div>
+					<div class="row">
+						<p><center><a href="#">Contact Stuff Here</a> <p class="footertext">Copyright 2015</p></center></p>
+					</div>
+				</div>
+			</div>
 
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/classie.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/smoothscroll.js"></script>
-    <script src="assets/js/main.js"></script>
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="assets/js/flat-ui.min.js"></script>
 </body>
 </html>

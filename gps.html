@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+  <html lang='en'>
+      <head>
+          <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        
+        <title>TrackFox</title>
+
+        <!-- Loading Bootstrap -->
+        <link href="./assets/css/vendor/bootstrap.min.css" rel="stylesheet">
+        <script type="text/javascript" src="./assets/js/vendor/jquery.min.js"></script>
+
+        <!-- Loading Flat UI -->
+        <link href="./assets/css/flat-ui.css" rel="stylesheet">
+        <link rel="shortcut icon" href="img/favicon.ico">
+      
+        <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+      </head>
+
+      <body data-ng-app='app'>
+
+      <div class="container">
+        <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+            <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a class="navbar-brand" href="#">TrackFox</a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbar-collapse-01">
+            <ul class="nav navbar-nav navbar-center">
+              <!-- Default Navbar Button -->
+              <a class="btn btn-primary navbar-btn" href="./cic.html" type="button">Circle of trust</a>
+              <!-- Small Navbar Button -->
+              <a class="btn btn-primary navbar-btn" href="./statistics.html" type="button">Statistics</a>
+              <!-- Extra Small Navbar Button -->
+              <a class="btn btn-default navbar-btn" href="./gps.html" type="button">GPS</a>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <button class="btn btn-danger navbar-btn" type="button">Sign Out!</button>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </nav><!-- /navbar -->
+      </div>
+      
+<div class="container">
+    <div class="method">
+        <div class="row margin-0 list-header hidden-sm hidden-xs">
+            <div class="col-md-3"><div class="header">Property</div></div>
+            <div class="col-md-2"><div class="header">Type</div></div>
+            <div class="col-md-2"><div class="header">Required</div></div>
+            <div class="col-md-5"><div class="header">Description</div></div>
+        </div>
+
+        <div class="row margin-0">
+            <div class="col-md-3">
+                <div class="cell">
+                    <div class="propertyname">
+                        CurrencyCode  <span class="mobile-isrequired">[Required]</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="cell">
+                    <div class="type">
+                        <code>String</code>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="cell">
+                    <div class="isrequired">
+                        Yes
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="cell">
+                    <div class="description">
+                        The standard ISO 4217 3-letter currency code
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-0">
+            <div class="col-md-3">
+                <div class="cell">
+                    <div class="propertyname">
+                        PriceType  <span class="mobile-isrequired">[Required]</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="cell">
+                    <div class="type">
+                        <code>Int32</code>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="cell">
+                    <div class="isrequired">
+                        Yes
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="cell">
+                    <div class="description">
+                        The type of price
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-0">
+            <div class="col-md-3">
+                <div class="cell">
+                    <div class="propertyname">
+                        WarehouseID  <span class="mobile-isrequired">[Required]</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="cell">
+                    <div class="type">
+                        <code>Int32</code>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="cell">
+                    <div class="isrequired">
+                        Yes
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="cell">
+                    <div class="description">
+                        The unique identifier for the warehouse
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-0">
+            <div class="col-md-3">
+                <div class="cell">
+                    <div class="propertyname">
+                        ItemCodes
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="cell">
+                    <div class="type">
+                        <code>String[]</code>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="cell">
+                    <div class="isrequired">
+                        <span class="text-muted">No</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="cell">
+                    <div class="description">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-0">
+            <div class="col-md-3">
+                <div class="cell">
+                    <div class="propertyname">
+                        LanguageID
+                        <a class="lookuplink" href="javascript:;">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="cell">
+                    <div class="type">
+                        <code>Int32?</code>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="cell">
+                    <div class="isrequired">
+                        <span class="text-muted">No</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="cell">
+                    <div class="description">
+                        The customer's preferred language ID (ex. 0 (English), 1 (Spanish), etc.)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+      <footer>
+      </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/flat-ui.min.js"></script>
+</body>
+      </body>
+  </html>
