@@ -7,8 +7,8 @@
  */
 
 ini_set('display_errors', 1);
-require('assets/lib/rb.php');
-R::setup('sqlite:SigFox.db', '','');
+require('../lib/rb.php');
+R::setup('sqlite:../lib/SigFox.db', '','');
 //R::setup('mysql:host=localhost;dbname=sigfox','root','');
 //$book = R::dispense('tablica');
 //$book->ime = 'marsinjo';

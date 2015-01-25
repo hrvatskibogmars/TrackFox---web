@@ -5,142 +5,142 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="shortcut icon" href="assets/ico/favicon.png">
+	<link rel="shortcut icon" href="./img/favicon.png">
 
 	<title>TrackFox</title>
 
-    <!-- Loading Bootstrap -->
-    <link href="./assets/css/vendor/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="./assets/js/vendor/jquery.min.js"></script>
+	<!-- Loading Bootstrap -->
+	<link href="./css/vendor/bootstrap.min.css" rel="stylesheet">
+	<script type="text/javascript" src="./js/vendor/jquery.min.js"></script>
 
-    <!-- Loading Flat UI -->
-    <link href="./assets/css/flat-ui.css" rel="stylesheet">
-    <link rel="shortcut icon" href="img/favicon.ico">
+	<!-- Loading Flat UI -->
+	<link href="./css/flat-ui.css" rel="stylesheet">
 	
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
-  </head>
+</head>
 
 <body data-spy="scroll" data-offset="0" data-target="#theMenu">
-		
+
 	<nav class="navbar navbar-default" role="navigation">
-	  <div class="navbar-header">
-	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
-	      <span class="sr-only">Toggle navigation</span>
-	    </button>
-	    <a class="navbar-brand" href="#">TrackFox</a>
-	  </div>
-	  <div class="collapse navbar-collapse" id="navbar-collapse-01">
-	    <ul class="nav navbar-nav">
-	      <li><a href="./index.html">Home</a></li>
-	      <li><a href="./login.html">Log in</a></li>
-	      <li class="active"><a href="./register.html">Register</a></li>
-	      <li><a href="#fakelink">About</a></li>
-	      <li><a href="#fakelink">Contact</a></li>
-	      <li><a href="#fakelink">Github</a></li>
-	    </ul>
-	  </div><!-- /.navbar-collapse -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+				<span class="sr-only">Toggle navigation</span>
+			</button>
+			<a class="navbar-brand" href="#">TrackFox</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse-01">
+			<ul class="nav navbar-nav">
+				<li><a href="./index.html">Home</a></li>
+				<li><a href="./login.html">Log in</a></li>
+				<li class="active"><a href="./register.html">Register</a></li>
+				<li><a href="#fakelink">About</a></li>
+				<li><a href="#fakelink">Contact</a></li>
+				<li><a href="#fakelink">Github</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
 	</nav><!-- /navbar -->
 
 
 
-  	<!-- ========== HEADER SECTION ========== -->
-  	<section id="home" name="home"></section>
-  	<div id="headerwrap">
-	  		<div class="container">
-	  				<div class="row">
-    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-		<form role="form">
-			<h2>Reg to track</h2>
-			<hr class="colorgraph">
+	<!-- ========== HEADER SECTION ========== -->
+	<!-- ========== HEADER SECTION ========== -->
+	<section id="home" name="home"></section>
+	<div id="headerwrap">
+		<div class="container">
 			<div class="row">
-				<div class="col-xs-6 col-sm-6 col-md-6">
-					<div class="form-group">
-                        <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
-					</div>
+				<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+					<form role="form" action='./scripts/reg.php' method="post">
+						<h2>Reg to track</h2>
+						<hr class="colorgraph">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<div class="form-group">
+									<input type="text" name="name" id="name" class="form-control input-lg" placeholder="First Name" tabindex="1">
+								</div>
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<div class="form-group">
+									<input type="text" name="surname" id="surname" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<input type="text" name="username" id="username" class="form-control input-lg" placeholder="Display Name" tabindex="3">
+						</div>
+						<div class="form-group">
+							<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<div class="form-group">
+									<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+								</div>
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6">
+								<div class="form-group">
+									<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+								</div>
+							</div>
+						</div>
+
+						
+						<hr class="colorgraph">
+						<div class="row">
+							<div class="col-xs-6 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+							<div class="col-xs-6 col-md-6"><a href="./login.html" class="btn btn-success btn-block btn-lg">Sign In</a></div>
+						</div>
+					</form>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6">
-					<div class="form-group">
-						<input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
-					</div>
-				</div>
 			</div>
-			<div class="form-group">
-				<input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3">
-			</div>
-			<div class="form-group">
-				<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
-			</div>
-			<div class="row">
-				<div class="col-xs-6 col-sm-6 col-md-6">
-					<div class="form-group">
-						<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6">
-					<div class="form-group">
-						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
-					</div>
-				</div>
-			</div>
-
-			
-			<hr class="colorgraph">
-			<div class="row">
-				<div class="col-xs-6 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
-				<div class="col-xs-6 col-md-6"><a href="./login.html" class="btn btn-success btn-block btn-lg">Sign In</a></div>
-			</div>
-		</form>
-	</div>
-</div>
-	  		</div>
-	</div>
-
-
-	<!-- ========== CONTACT SECTION ========== -->
-	<section id="contact" name="contact"></section>
-	<div id="footer">
-	    <div class="container">
-		    <div class="row">
-		        <h3 class="footertext">About Us:</h3>
-		        <br>
-		        <div class="col-md-4">
-			        <center>
-				        <img src="http://oi60.tinypic.com/w8lycl.jpg" class="img-circle" alt="the-brains">
-				        <br>
-				        <h4 class="footertext">Programmer</h4>
-				        <p class="footertext">You can thank all the crazy programming here to this guy.<br>
-			        </center>
-		        </div>
-
-		        <div class="col-md-4">
-			        <center>
-				        <img src="http://oi60.tinypic.com/2z7enpc.jpg" class="img-circle" alt="...">
-				        <br>
-				        <h4 class="footertext">Artist</h4>
-				        <p class="footertext">All the images here are hand drawn by this man.<br>
-			        </center>
-		        </div>
-				
-				<div class="col-md-4">
-			        <center>
-			        <img src="http://oi61.tinypic.com/307n6ux.jpg" class="img-circle" alt="...">
-			        <br>
-			        <h4 class="footertext">Designer</h4>
-			        <p class="footertext">This pretty site and the copy it holds are all thanks to this guy.<br>
-			        </center>
-		        </div>
-		   	</div>
-
-		    <div class="row">
-		        <p><center><a href="#">Contact Stuff Here</a> <p class="footertext">Copyright 2015</p></center></p>
-		    </div>
 		</div>
-	</div>
+
+
+		<!-- ========== CONTACT SECTION ========== -->
+		<section id="contact" name="contact"></section>
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<h3 class="footertext">About Us:</h3>
+					<br>
+					<div class="col-md-4">
+						<center>
+							<img src="http://oi60.tinypic.com/w8lycl.jpg" class="img-circle" alt="the-brains">
+							<br>
+							<h4 class="footertext">Programmer</h4>
+							<p class="footertext">You can thank all the crazy programming here to this guy.<br>
+							</center>
+						</div>
+
+						<div class="col-md-4">
+							<center>
+								<img src="http://oi60.tinypic.com/2z7enpc.jpg" class="img-circle" alt="...">
+								<br>
+								<h4 class="footertext">Artist</h4>
+								<p class="footertext">All the images here are hand drawn by this man.<br>
+								</center>
+							</div>
+
+							<div class="col-md-4">
+								<center>
+									<img src="http://oi61.tinypic.com/307n6ux.jpg" class="img-circle" alt="...">
+									<br>
+									<h4 class="footertext">Designer</h4>
+									<p class="footertext">This pretty site and the copy it holds are all thanks to this guy.<br>
+									</center>
+								</div>
+							</div>
+
+							<div class="row">
+								<p><center><a href="#">Contact Stuff Here</a> <p class="footertext">Copyright 2015</p></center></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/flat-ui.min.js"></script>
+    <script src="./js/flat-ui.min.js"></script>
 </body>
 </html>
