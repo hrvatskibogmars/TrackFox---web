@@ -25,29 +25,28 @@
 <body data-ng-app='app'>
 
   <div class="container">
-    <div class="container">
-      <nav class="navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
-            <span class="sr-only">Toggle navigation</span>
-          </button>
-          <a class="navbar-brand" href="#">TrackFox</a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar-collapse-01">
-          <ul class="nav navbar-nav navbar-center">
-            <!-- Default Navbar Button -->
-            <a class="btn btn-primary navbar-btn" href="./cot.html" type="button">Circle of trust</a>
-            <!-- Small Navbar Button -->
-            <a class="btn btn-default navbar-btn" href="./statistics.html" type="button">Statistics</a>
-            <!-- Extra Small Navbar Button -->
-            <a class="btn btn-primary navbar-btn" href="./gps.html" type="button">GPS</a>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <button class="btn btn-danger navbar-btn" type="button">Sign Out!</button>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </nav><!-- /navbar -->
-    </div>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <a class="navbar-brand" href="#">TrackFox</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse-01">
+        <ul class="nav navbar-nav navbar-center">
+          <!-- Default Navbar Button -->
+          <a class="btn btn-primary navbar-btn" href="./cot.html" type="button">Circle of trust</a>
+          <!-- Small Navbar Button -->
+          <a class="btn btn-default navbar-btn" href="./statistics.html" type="button">Statistics</a>
+          <!-- Extra Small Navbar Button -->
+          <a class="btn btn-primary navbar-btn" href="./gps.html" type="button">GPS</a>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <button class="btn btn-danger navbar-btn" type="button">Sign Out!</button>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </nav><!-- /navbar -->
+    
     
     <div class='panel panel-default' data-ng-controller='stats_controller'>
       <div class='panel-heading'>
@@ -58,63 +57,64 @@
         </h1>
       </div>
 
-        <div class='panel-body'>
-          <div class='row'>
-            <div class='col-md-12'>
-              <div class='table-responsive'>
-                <table class='table'>
-                  <thead>
-                    <td>
-                      <b>ID - Stat</b>
-                    </td>
-                    <td>
-                      <b>Date</b>
-                    </td>
-                    <td>
-                      <b>Device name</b>
-                    </td>
-                    <td>
-                      <b>Latitude</b>
-                    </td>
-                    <td>
-                      <b>Logitude</b>
-                    </td>
-                    <td>
-                      <b>Last used</b>
-                    </td>
-                  </thead>
-                  <tr ng-repeat='stat in stats'>
-                    <td>
-                       {{stat.id_stat}}
-                    </td>
-                    <td>
-                      {{stat.date}}
-                    </td>
-                    <td>
-                      {{stat.name}}
-                    </td>
-                    <td>
-                      {{stat.latitude}}
-                    </td>
-                    <td>
-                     {{stat.longitude}}
-                    </td>
-                    <td>
-                     {{stat.last_used}}
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
+      <div class='panel-body'>
+        <div class='row'>
+          <div class='col-md-12'>
+            <div class='table-responsive'>
+              <table class='table'>
+                <thead>
+                  <td>
+                    <b>ID - Stat</b>
+                  </td>
+                  <td>
+                    <b>Date</b>
+                  </td>
+                  <td>
+                    <b>Device name</b>
+                  </td>
+                  <td>
+                    <b>Latitude</b>
+                  </td>
+                  <td>
+                    <b>Logitude</b>
+                  </td>
+                  <td>
+                    <b>Last used</b>
+                  </td>
+                </thead>
+                <tr ng-repeat='stat in stats'>
+                  <td>
+                   {{stat.id_stat}}
+                 </td>
+                 <td>
+                  {{stat.date}}
+                </td>
+                <td>
+                  {{stat.name}}
+                </td>
+                <td>
+                  {{stat.latitude}}
+                </td>
+                <td>
+                 {{stat.longitude}}
+               </td>
+               <td>
+                 {{stat.last_used}}
+               </td>
+             </tr>
+           </table>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
 
 
 
 
-    <footer>
-    </footer>
+<footer>
+</footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
