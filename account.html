@@ -60,19 +60,19 @@
               <table class='table'>
                 <thead>
                   <td>
-                    <b>ID - Device</b>
+                    <b>Device ID</b>
                   </td>
                   <td>
-                    <b>Device name</b>
+                    <b>Session ID</b>
                   </td>
                   <td>
-                    <b>Last used</b>
+                    <b>Latitude</b>
                   </td>
                   <td>
-                    <b>Last used</b>
+                    <b>Longitude</b>
                   </td>
                   <td>
-                    <b>Active</b>
+                    <b>Date added</b>
                   </td>
                 </thead>
                 <tr ng-repeat='device in devices'>
@@ -99,7 +99,15 @@
      </div>
    </div>
 
-  <div class="row">
+<!-- Large modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Add device</button>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      
+
+       <div class="row">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
       <form role="form" action='./scripts/addDevice.php' method="post">
         <h2>Add device</h2>
@@ -130,6 +138,11 @@
             </div>
         </form>
     </div>
+    </div>
+  </div>
+</div>
+
+ 
   </div>
 
    <footer>

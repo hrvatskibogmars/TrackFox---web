@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$device->sessionid = $_POST['sessionid'];
 		$device->lat = $_POST['lat'];
 		$device->long = $_POST['long'];
-		$device->datetime = date('Y-m-d H:i:s');;
+		$device->datetime = date('H:i:s d-m-Y');;
 
 		//$exists = R::findOne( 'devices', 'deviceid = :deviceid ', array( ":deviceid" => $device->deviceid ));
 		//if ($exists) {
