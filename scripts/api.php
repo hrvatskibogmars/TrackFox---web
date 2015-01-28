@@ -31,6 +31,7 @@
 		$device->sessionid = $request->sessionid;
 
 		$id = R::store($device);
+		echo json_encode($device);
 		}
 	}
 ?>

@@ -32,14 +32,14 @@
       <div class="collapse navbar-collapse" id="navbar-collapse-01">
         <ul class="nav navbar-nav navbar-center">
           <!-- Default Navbar Button -->
-          <a class="btn btn-default navbar-btn" href="./cot.html" type="button">Circle of trust</a>
+          <a class="btn btn-default navbar-btn" href="./account.html" type="button">Account</a>
           <!-- Small Navbar Button -->
           <a class="btn btn-primary navbar-btn" href="./statistics.html" type="button">Statistics</a>
           <!-- Extra Small Navbar Button -->
           <a class="btn btn-primary navbar-btn" href="./gps.html" type="button">GPS</a>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <button class="btn btn-danger navbar-btn" type="button">Sign Out!</button>
++          <button class="btn btn-danger navbar-btn" type="button"><a href='./scripts/logout.php'>Sign Out!</button>
         </ul>
       </div><!-- /.navbar-collapse -->
     </nav><!-- /navbar -->
@@ -48,7 +48,7 @@
       <div class='panel-heading'>
         <h1 class='panel-title'>
           <a data-toggle='collapse' data-parent='#accordion' href='#collapseThree'>
-            Circle of trust
+            Account
           </a>
         </h1>
       </div>
@@ -77,19 +77,19 @@
                 </thead>
                 <tr ng-repeat='device in devices'>
                   <td>
-                    {{device.id_device}}
+                    {{device.deviceid}}
                   </td>
                   <td>
-                    {{device.name}}
+                    {{device.sessionid}}
                   </td>
                   <td>
-                    {{device.last_used}}
+                    {{device.lat}}
                   </td>
                   <td>
-                   {{device.date}}
+                   {{device.long}}
                  </td>
                  <td>
-                   {{device.status}}
+                   {{device.datetime}}
                  </td>
                </tr>
              </table>
@@ -98,6 +98,38 @@
        </div>
      </div>
    </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <form role="form" action='./scripts/addDevice.php' method="post">
+        <h2>Add device</h2>
+        <hr class="colorgraph">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <input type="text" name="deviceid" id="deviceid" class="form-control input-lg" placeholder="DeviceID" tabindex="1">
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="text" name="sessionid" id="sessionid" class="form-control input-lg" placeholder="SessionID" tabindex="2">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" name="lat" id="lat" class="form-control input-lg" placeholder="Latitude" tabindex="3">
+          </div>
+          <div class="form-group">
+            <input type="text" name="long" id="long" class="form-control input-lg" placeholder="Longitude" tabindex="4">
+          </div>
+          <hr class="colorgraph">
+          <div class="row">
+          <div class="col-xs-6 col-md-6">
+            <button class='btn btn-primary'>Spremi</button></div>
+
+            </div>
+        </form>
+    </div>
   </div>
 
    <footer>
