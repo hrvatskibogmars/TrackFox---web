@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-
+  <link rel="shortcut icon" href="./img/favicon.png">
+  
+  
   <title>TrackFox</title>
 
   <!-- Loading Bootstrap -->
   <link href="./css/vendor/bootstrap.min.css" rel="stylesheet">
   <script type="text/javascript" src="./js/vendor/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+  <link rel="stylesheet" type="text/css" href="./css/design.css">
+  <script src="./js/google_script.js"></script>
 
   <!-- Loading Flat UI -->
   <link href="./css/flat-ui.css" rel="stylesheet">
@@ -83,6 +87,38 @@
 +
 +</html>
 
+<<<<<<< HEAD
+=======
+    <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a class="navbar-brand" href="#">TrackFox</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-01">
+            <ul class="nav navbar-nav navbar-center">
+              <!-- Default Navbar Button -->
+              <a class="btn btn-primary navbar-btn" href="./cot.html" type="button">Circle of trust</a>
+              <!-- Small Navbar Button -->
+              <a class="btn btn-primary navbar-btn" href="./statistics.html" type="button">Statistics</a>
+              <!-- Extra Small Navbar Button -->
+              <a class="btn btn-default navbar-btn" href="./gps.html" type="button">GPS</a>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <button class="btn btn-danger navbar-btn" type="button"><a href='./scripts/logout.php'>Sign Out!</button>
+			  
+          </ul>
+      </div><!-- /.navbar-collapse -->
+  </nav><!-- /navbar -->
+  
+</div>
+<div id="map-canvas"></div>
+
+  
+
+>>>>>>> origin/master
   <footer>
   </footer>
 
@@ -90,6 +126,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="./js/flat-ui.min.js"></script>
-  </body>
 </body>
+
 </html>
