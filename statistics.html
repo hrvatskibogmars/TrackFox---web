@@ -48,15 +48,16 @@
     </nav><!-- /navbar -->
     
     
-    <div class='panel panel-default' data-ng-controller='stats_controller'>
+
+    <div class='panel panel-default' data-ng-controller='cotController'>
       <div class='panel-heading'>
         <h1 class='panel-title'>
           <a data-toggle='collapse' data-parent='#accordion' href='#collapseThree'>
-            Statistics
+            Account
           </a>
         </h1>
       </div>
-
+      
       <div class='panel-body'>
         <div class='row'>
           <div class='col-md-12'>
@@ -64,44 +65,44 @@
               <table class='table'>
                 <thead>
                   <td>
-                    <b>ID - Stat</b>
+                    <b>Device ID</b>
                   </td>
                   <td>
-                    <b>Device name</b>
+                    <b>Session ID</b>
                   </td>
                   <td>
                     <b>Latitude</b>
                   </td>
                   <td>
-                    <b>Logitude</b>
+                    <b>Longitude</b>
                   </td>
                   <td>
-                    <b>Last used</b>
+                    <b>Date added</b>
                   </td>
                 </thead>
-                <tr ng-repeat='stat in stats'>
+                <tr ng-repeat='device in devices'>
                   <td>
-                   {{stat.id_stat}}
+                    {{device.deviceid}}
+                  </td>
+                  <td>
+                    {{device.sessionid}}
+                  </td>
+                  <td>
+                    {{device.lat}}
+                  </td>
+                  <td>
+                   {{device.long}}
                  </td>
-                <td>
-                  {{stat.name}}
-                </td>
-                <td>
-                  {{stat.latitude}}
-                </td>
-                <td>
-                 {{stat.longitude}}
-               </td>
-               <td>
-                 {{stat.last_used}}
-               </td>
-             </tr>
-           </table>
+                 <td>
+                   {{device.datetime}}
+                 </td>
+               </tr>
+             </table>
+           </div>
          </div>
        </div>
      </div>
    </div>
- </div>
 </div>
 
 

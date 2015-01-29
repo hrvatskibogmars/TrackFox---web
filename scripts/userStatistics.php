@@ -6,7 +6,7 @@
 		$postdata = file_get_contents("php://input");
 		$request = json_decode($postdata);
 
-		if ($request->action == "userDevices") {
+		if ($request->action == "userStatistics") {
 			$config = R::getAll("select * from devices");
 			echo json_encode($config);
 		}

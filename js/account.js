@@ -1,13 +1,10 @@
 var app = angular.module('app', []);
 
-
-app.controller('cotController', function($scope, $http) {
+app.controller('listAccount', function($scope, $http) {
     $scope.devices = [];
-    $http.post('./scripts/userDevices.php', { action: "userDevices"})
+    $http.post('./scripts/userDevice.php', { action: "userDevice"})
       .success(function(data, status, headers, config) {
-        //console.log(data);
+        console.log(data);
         $scope.devices = data;
       });
-
-
   });

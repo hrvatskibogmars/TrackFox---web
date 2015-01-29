@@ -44,7 +44,7 @@
       </div><!-- /.navbar-collapse -->
     </nav><!-- /navbar -->
 
-    <div class='panel panel-default' data-ng-controller='cotController'>
+    <div class='panel panel-default' data-ng-controller='listAccount'>
       <div class='panel-heading'>
         <h1 class='panel-title'>
           <a data-toggle='collapse' data-parent='#accordion' href='#collapseThree'>
@@ -63,16 +63,7 @@
                     <b>Device ID</b>
                   </td>
                   <td>
-                    <b>Session ID</b>
-                  </td>
-                  <td>
-                    <b>Latitude</b>
-                  </td>
-                  <td>
-                    <b>Longitude</b>
-                  </td>
-                  <td>
-                    <b>Date added</b>
+                    <b>Name of Device</b>
                   </td>
                 </thead>
                 <tr ng-repeat='device in devices'>
@@ -80,17 +71,8 @@
                     {{device.deviceid}}
                   </td>
                   <td>
-                    {{device.sessionid}}
+                    {{device.name}}
                   </td>
-                  <td>
-                    {{device.lat}}
-                  </td>
-                  <td>
-                   {{device.long}}
-                 </td>
-                 <td>
-                   {{device.datetime}}
-                 </td>
                </tr>
              </table>
            </div>
@@ -107,7 +89,7 @@
     <div class="modal-content">
       
 
-       <div class="row">
+  <div class="row">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
       <form role="form" action='./scripts/addDevice.php' method="post">
         <h2>Add device</h2>
@@ -120,24 +102,18 @@
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6">
               <div class="form-group">
-                <input type="text" name="sessionid" id="sessionid" class="form-control input-lg" placeholder="SessionID" tabindex="2">
+                <input type="text" name="name" id="sessionid" class="form-control input-lg" placeholder="Device name" tabindex="2">
               </div>
             </div>
-          </div>
-          <div class="form-group">
-            <input type="text" name="lat" id="lat" class="form-control input-lg" placeholder="Latitude" tabindex="3">
-          </div>
-          <div class="form-group">
-            <input type="text" name="long" id="long" class="form-control input-lg" placeholder="Longitude" tabindex="4">
           </div>
           <hr class="colorgraph">
           <div class="row">
           <div class="col-xs-6 col-md-6">
-            <button class='btn btn-primary'>Spremi</button></div>
-
+            <button class='btn btn-primary'>Save</button></div>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </form>
-    </div>
+      </div>
     </div>
   </div>
 </div>
@@ -152,7 +128,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="./js/flat-ui.min.js"></script>
-    <script src="./js/cot.js"></script>
+    <script src="./js/account.js"></script>
 
   </body>
 </body>
