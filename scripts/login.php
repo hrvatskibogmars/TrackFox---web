@@ -11,7 +11,7 @@ session_start();
 if(isset($_POST))  {
     $mail = $_POST['email'];
 
-    $login = R::findOne( 'users', ' email = :var_email ',array(":var_email" => $mail) );
+    $login = R::findOne( 'userInfo', ' email = :var_email ',array(":var_email" => $mail) );
     if ($login == null){
         echo "Wrong email";
     }
@@ -20,10 +20,10 @@ if(isset($_POST))  {
         if ($login->password != $pass || $login->email != $mail) {
             echo "Wrong password";
         } else {
-            R::store($login);
-            $_SESSION['username'] = $login->username;
-            header("Location:../cot.html");
-            echo $_SESSION['username'];
+            //R::store($login);
+            $_SESSION['userid'] = $login->id;
+            header("Location:../statistics.php");
+            //echo $_SESSION['userid'];
         }
     }
 

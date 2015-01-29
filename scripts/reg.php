@@ -9,7 +9,7 @@
 include_once('connectConfig.php');
 session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-	$user = R::dispense('users');
+	$user = R::dispense('userinfo');
 	$user->name = $_POST['name'];
 	$user->surname = $_POST['surname'];
 	$user->username = $_POST['username'];
